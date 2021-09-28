@@ -5,8 +5,19 @@
 [![GitHub issues](https://img.shields.io/github/issues/ivbhatt/se-project-september)](https://github.com/ivbhatt/se-project-september/issues)
 [![Build Status](https://app.travis-ci.com/ivbhatt/se-project-september.svg?branch=Testing)](https://app.travis-ci.com/ivbhatt/se-project-september)
 
+# Description
+In this project, we aim to create a Task Scheduler application - "Simpli" that schedules tasks for the day for a user based on the following parameters
+  - Priority of the task
+  - Time requied for the task
+  - Mood of the user
 
-This repository is our team's work for september
+# Authors
+- Arpitha Vijayakumar (avijaya6@ncsu.edu)
+- Ishan Bhatt (ivbhatt@ncsu.edu)
+- Krishika Shivnani (kmshivna@ncsu.edu)
+- Apurva Sonavane (asonava@ncsu.edu)
+- Unnati Nadupalli (upnadupa@ncsu.edu)
+
 
 ## Python installation (Linux)
 
