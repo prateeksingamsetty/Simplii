@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Release](https://img.shields.io/github/release/ivbhatt/se-project-september)](https://github.com/ivbhatt/se-project-september/issues)
 [![GitHub issues](https://img.shields.io/github/issues/ivbhatt/se-project-september)](https://github.com/ivbhatt/se-project-september/issues)
-[![Build Status](https://app.travis-ci.com/ivbhatt/se-project-septembe.svg?branch=Testing)](https://app.travis-ci.com/ivbhatt/se-project-september)
+[![Build Status](https://app.travis-ci.com/ivbhatt/se-project-september.svg?branch=Testing)](https://app.travis-ci.com/ivbhatt/se-project-september)
 
 
 This repository is our team's work for september
