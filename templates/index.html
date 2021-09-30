@@ -88,7 +88,7 @@
     <div class="container overflow-auto rounded" id = "settings-block">
       <p>
       	<h2> + Add a task </h2>
-        <form onsubmit="submitTask({{data|tojson}})" method="GET" id="add-task-form">
+        <form onsubmit="submitTask({{data|tojson}}) " method="GET" id="add-task-form">
           <div class="field">
             <label for="taskName"> Title:</label>
             <input type="text" name="taskName" placeholder="Algo Assignment 2 / Water Plants">
