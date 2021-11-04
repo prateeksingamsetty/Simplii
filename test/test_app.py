@@ -11,7 +11,17 @@ class TestModule(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get("/", content_type='html/text')
         self.assertEqual(response.status_code, 200)
-
+        
+    def test_login(self):
+        tester = app.test_client(self)
+        response = tester.get("/login", content_type='html/text')
+        self.assertEqual(response.status_code, 200)
+        
+    def test_signup(self):
+        tester = app.test_client(self)
+        response = tester.get("/signup", content_type='html/text')
+        self.assertEqual(response.status_code, 200)
+        
     def test_add_task(self):
         tester = app.test_client(self)
         inp = {"taskName": "dummy_task", "deadline": "2021-03-30T21:08", "estimateInput": 1, "taskType": "physical",
