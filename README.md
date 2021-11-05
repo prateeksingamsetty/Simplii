@@ -128,5 +128,5 @@ ER Diagram                 |  Application Flowchart
 </center>
 
 ## Support
-For any queries and help, please reach out to us at: krishika510@gmail.com
+For any queries and help, please reach out to us at: simplii.reminder@gmail.com
 

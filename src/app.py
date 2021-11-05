@@ -24,6 +24,7 @@ client = pymongo.MongoClient("mongodb+srv://radhika:Radhika1997@simplii.tvhh1.mo
 db = client.simplii
 testUserInfo = db.testUserInfo
 testTaskInfo = db.testTaskInfo
+det = []
 
 
 app = Flask(__name__, static_folder='static')
@@ -140,7 +141,11 @@ def login_post():
                 session['user_id'] = user_id
                 session['email'] = db_emailid
                 session['name'] = name
-                return redirect(url_for('mainPage'))
+                det = []
+                for tmp in testTaskInfo.find({"user_id": session['user_id']}):
+                    det.append([tmp['task_name'],tmp['estimate'],tmp['deadline']])
+                return render_template("index.html",name=session['name'],e=session['email'],det=det,data=refresh_data())
+                #return redirect(url_for('mainPage'))
         return render_template('index.html')
 
 @app.route("/send_email", methods=['GET','POST'])
@@ -216,7 +221,12 @@ def signup_post():
             session['user_id'] = user_id
             session['email'] = email
             session['name'] = user_first_name + " " + user_last_name
-            return redirect(url_for('mainPage'))
+            det = []
+            for tmp in testTaskInfo.find({"user_id": session['user_id']}):
+                det.append([tmp['task_name'],tmp['estimate'],tmp['deadline']])
+    
+            return render_template("index.html",name=session['name'],e=session['email'],det=det,data=refresh_data())
+            #return redirect(url_for('mainPage'))
     return render_template('login.html')
 
 @app.route("/index")
