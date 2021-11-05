@@ -281,7 +281,7 @@ def add_new_task():
         det.append([tmp['task_name'],tmp['estimate'],tmp['deadline']])
     
     #return redirect("/index")    
-    return render_template("index.html",name=session['user_id'],e=session['email'],det=det,data=refresh_data())
+    return render_template("index.html", name=session['user_id'], e=session['email'], det=det, data=refresh_data())
 
 
 @app.route("/delete_task", methods = ["POST"])
