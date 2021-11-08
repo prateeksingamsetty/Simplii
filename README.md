@@ -9,8 +9,8 @@
 ![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/unit_test.yml/badge.svg)
 ![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/style_checker.yml/badge.svg)
 ![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/python-app.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/code_cov.yml/badge.svg)
+<!---![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/python-app.yml/badge.svg)
+![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/code_cov.yml/badge.svg)-->
 ![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 <!--Badges-->
 <a href="https://github.com/deekay2310/Simplii/fork" target="blank">
@@ -57,9 +57,21 @@
 
 Do you feel that your basic task scheduling apps should also track your mood and suggest a task accordingly? We hear it. We are trying to build a tool that will enable fast execution of our tasks under any mood. `Simplii` parameterizes emotions, deadlines, task difficulty and moods to suggest a task to be done keeping you at your productive best.
 
+<p align="center">
+<a><img height=200 width=200 
+src="https://user-images.githubusercontent.com/89432698/140456823-42f69435-d792-4687-bb20-aaa551016df1.png"></a>
+<a><img height=200 width=200 
+src="https://user-images.githubusercontent.com/89432698/140457341-b37dcb30-7127-440e-80ba-e5a46826532c.jpeg"></a></p>
+
+
 ## Visual Walkthrough:
 
 https://user-images.githubusercontent.com/17769434/135383467-e197d4ca-74f8-4737-a979-4390026cb71d.mp4
+
+
+https://user-images.githubusercontent.com/89432698/140456563-6b1126c5-7830-4fc5-bcac-a9463b96c135.mp4
+
+
 
 ## Built with:
 <table border = "0px">
