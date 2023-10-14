@@ -114,7 +114,7 @@ def register():
                 email = request.form.get('email')
                 password = request.form.get('password')
                 mongo.db.users.insert({'name': username, 'email': email, 'pwd': bcrypt.hashpw(
-                    password.encode("utf-8"), bcrypt.gensalt()), 'temp': None})
+                    password.encode("utf-8"), bcrypt.gensalt()), 'tasksList':[]})
             flash(f'Account created for {form.username.data}!', 'success')
             return redirect(url_for('home'))
     else:
@@ -158,6 +158,8 @@ def task():
         if form.validate_on_submit():
             print("inside form")
             if request.method == 'POST':
+                user_str_id = session.get('user_id')
+                user_id = ObjectId(user_str_id)
                 email = session.get('email')
                 taskname = request.form.get('taskname')
                 category = request.form.get('category')
@@ -165,13 +167,26 @@ def task():
                 duedate = request.form.get('duedate')
                 hours = request.form.get('hours')
                 status = request.form.get('status')
-                mongo.db.tasks.insert({'email': email,
+                task_id = mongo.db.tasks.insert({'user_id': user_id,
                                        'taskname': taskname,
                                        'category': category,
                                        'startdate': startdate,
                                        'duedate': duedate,
                                        'status': status,
                                        'hours': hours})
+                
+                #Now update the user schema's TaskList field with the taskId(Basically append the new task id to that array)
+                user_document = mongo.db.users.find_one({'_id': user_id})
+                tasks_list = user_document.get('tasksList', [])
+                tasks_list.append(task_id)
+
+                # Update the user's tasksList field
+                mongo.db.users.update_one(
+                    {'_id': user_id},
+                    {
+                        '$set': {'tasksList': tasks_list}
+                    }
+                )
             flash(f' {form.taskname.data} Task Added!', 'success')
             return redirect(url_for('home'))
     else:
@@ -259,19 +274,23 @@ def login():
         form = LoginForm()
         if form.validate_on_submit():
             temp = mongo.db.users.find_one({'email': form.email.data}, {
-                'email', 'pwd'})
+                'email', 'name', 'pwd'})
+            print("temp ", temp)
             if temp is not None and temp['email'] == form.email.data and (
                 bcrypt.checkpw(
                     form.password.data.encode("utf-8"),
                     temp['pwd']) or temp['temp'] == form.password.data):
                 flash('You have been logged in!', 'success')
                 session['email'] = temp['email']
+                session['name'] = temp['name']
+                session['user_id'] = str(temp['_id'])
                 return redirect(url_for('dashboard'))
             else:
                 flash(
                     'Login Unsuccessful. Please check username and password',
                     'danger')
     else:
+        print("session details ", session)
         return redirect(url_for('home'))
     return render_template(
         'login.html',
