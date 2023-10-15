@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from bson.objectid import ObjectId
 
+from tabulate import tabulate
 from flask_wtf import form
 from flask import app, render_template, session, url_for, flash, redirect, request, Response, Flask
 from flask_pymongo import PyMongo
@@ -79,10 +80,10 @@ def recommend():
 
         # Fetch all tasks for the user and sort by 'duedate' in ascending order
         tasks = list(mongo.db.tasks.find({'user_id': user_id}).sort('duedate', ASCENDING))
-
+        print("tasks in app.py ", tasks)
         # Convert 'duedate' strings to datetime objects for sorting
-        for task in tasks:
-            task['duedate'] = datetime.strptime(task['duedate'], '%Y-%m-%d')
+        # for task in tasks:
+        #     task['duedate'] = datetime.strptime(task['duedate'], '%Y-%m-%d')
 
         return render_template('recommend.html', title='Recommend', tasks=tasks)
     else:
@@ -98,45 +99,56 @@ def send_email_reminders():
             due_date = request.form.get('duedate')  # Get the due date input from the form
             user_str_id = session.get('user_id')
             user_id = ObjectId(user_str_id)
-
             
             # Convert the due date to a datetime object
-            #due_date = datetime.strptime(due_date, '%Y-%m-%d')
-
             due_date=datetime.strptime(due_date, '%Y-%m-%d').date()
-            
-            
-
-            # Calculate the current date
-            current_date = datetime.now().date()
-
-            print("Due Date",type(due_date))
-            print("current_date",type(current_date))
-        
 
             # Fetch tasks whose due date falls within the specified range
             relevant_tasks = mongo.db.tasks.find({
                 'user_id': user_id,
-                'duedate': {'$gte': current_date, '$lte': due_date}
-            })
+                'duedate': {'$lt': due_date.strftime('%Y-%m-%d')}  # Convert due_date back to string for comparison
+            }).sort('duedate', 1)
+
+            # Convert the cursor to a list of dictionaries
+            relevant_tasks = list(relevant_tasks)
+
+            # Create an HTML table from the task data
+            table_html = "<table border='1'><tr><th>Task Name</th><th>Category</th><th>Start Date</th><th>Due Date</th><th>Status</th><th>Hours</th></tr>"
 
             for task in relevant_tasks:
-            # Compose and send email reminders
-                subject = "Task Reminder"
-                recipients = [task['user_email']]  # Assuming you have a field for user email in tasks
-                message_body = render_template('reminder_email_template.html', task=task)
+                table_html += f"<tr><td>{task['taskname']}</td><td>{task['category']}</td><td>{task['startdate']}</td><td>{task['duedate']}</td><td>{task['status']}</td><td>{task['hours']}</td></tr>"
 
-                msg = Message(subject=subject, recipients=recipients, body=message_body)
-                mail.send(msg)
+            table_html += "</table>"
+
+            # Compose the email
+            msg = Message('Welcome to Simplii: Your Task Scheduling Companion', sender='dummysinghhh@gmail.com', recipients=['dummysinghhh@gmail.com'])
+
+            # Create the text version of the email with the table
+            email_body = f"Here are your tasks:\n\n{table_html}"
+            msg.html = email_body
+            mail.send(msg)
 
             flash("Email reminders sent for tasks with due dates in the specified range.", 'success')
-
-        # Continue with the rest of the code to display tasks and the input field
-        # ...
+            return render_template('recommend.html', title='Recommend', tasks=relevant_tasks)
+        
+        # Handle GET request, presumably to display tasks
+        user_str_id = session.get('user_id')
+        user_id = ObjectId(user_str_id)
+        tasks = mongo.db.tasks.find({
+            'user_id': user_id,
+        })
+        return render_template('recommend.html', tasks=tasks)
+        # else:
+        #     # Fetch tasks whose due date falls within the specified range
+        #     user_str_id = session.get('user_id')
+        #     user_id = ObjectId(user_str_id)
+        #     tasks = mongo.db.tasks.find({
+        #         'user_id': user_id,
+        #     })
+        #     return redirect(url_for('recommend'))
 
     else:
         return redirect(url_for('home'))
-    return render_template('mailsent.html', title='Recommend')
 
 
 
