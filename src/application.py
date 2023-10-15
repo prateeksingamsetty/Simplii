@@ -21,14 +21,12 @@ app.secret_key = 'secret'
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/simplii'
 mongo = PyMongo(app)
 
-"""app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = "bogusdummy123@gmail.com"
-app.config['MAIL_PASSWORD'] = "helloworld123!"
+app.config['MAIL_USERNAME'] = "dummysinghhh@gmail.com"
+app.config['MAIL_PASSWORD'] = "wbjf dsfu mper nqfv"
 mail = Mail(app)
-"""
-
 
 @app.route("/")
 @app.route("/home")
@@ -83,8 +81,9 @@ def dashboard():
     # Output: Our function will redirect to the dashboard page with user tasks being displayed
     # ##########################
     tasks = ''
-    if session.get('email'):
-        tasks = mongo.db.tasks.find({'email': session.get('email')})
+    print('session in dashboard ',session)
+    if session.get('user_id'):
+        tasks = mongo.db.tasks.find({'user_id': ObjectId(session.get('user_id'))})
     return render_template('dashboard.html', tasks=tasks)
 
 
@@ -113,8 +112,17 @@ def register():
                 username = request.form.get('username')
                 email = request.form.get('email')
                 password = request.form.get('password')
-                mongo.db.users.insert({'name': username, 'email': email, 'pwd': bcrypt.hashpw(
+                mongo.db.users.insert_one({'name': username, 'email': email, 'pwd': bcrypt.hashpw(
                     password.encode("utf-8"), bcrypt.gensalt()), 'tasksList':[]})
+            msg = Message('Welcome to Simplii: Your Task Scheduling Companion', sender='dummysinghhh@gmail.com', recipients=['dummysinghhh@gmail.com'])
+            msg.body = f"Hey {username},\n\n" \
+           "We're excited to welcome you to Simplii, your new task scheduling companion. Simplii is here to help you stay organized, meet deadlines, and achieve your goals efficiently.\n\n" \
+           "With Simplii, you can schedule your tasks, set deadlines, and work on them with ease. Never miss an important deadline again!\n\n" \
+           "Thank you for choosing Simplii. We're thrilled to have you on board. If you have any questions or need assistance, feel free to reach out to us.\n\n" \
+           "Best regards,\n" \
+           "The Simplii Team"
+            mail.send(msg)
+            print("Message sent!")
             flash(f'Account created for {form.username.data}!', 'success')
             return redirect(url_for('home'))
     else:
@@ -131,12 +139,13 @@ def deleteTask():
     # Output: Out function will delete the particular user task from database
     # ##########################
     if request.method == 'POST':
-        email = session.get('email')
+        user_str_id = session.get('user_id')
+        user_id = ObjectId(user_str_id)
         task = request.form.get('task')
         status = request.form.get('status')
         category = request.form.get('category')
         id = mongo.db.tasks.find_one(
-            {'email': email, 'taskname': task, 'status': status, 'category': category}, {'_id'})
+            {'_id': user_id, 'taskname': task, 'status': status, 'category': category}, {'_id'})
         print("Hereeeeeeeeeeeeeee", id['_id'])
         mongo.db.tasks.delete_one({'_id': id['_id']})
         return "Success"
@@ -160,7 +169,6 @@ def task():
             if request.method == 'POST':
                 user_str_id = session.get('user_id')
                 user_id = ObjectId(user_str_id)
-                email = session.get('email')
                 taskname = request.form.get('taskname')
                 category = request.form.get('category')
                 startdate = request.form.get('startdate')
@@ -203,12 +211,13 @@ def editTask():
     # Output: Out function will update new values in the database
     # ##########################
     if request.method == 'POST':
-        email = session.get('email')
+        user_str_id = session.get('user_id')
+        user_id = ObjectId(user_str_id)
         task = request.form.get('task')
         status = request.form.get('status')
         category = request.form.get('category')
         id = mongo.db.tasks.find_one(
-            {'email': email, 'taskname': task, 'status': status, 'category': category})
+            {'_id': user_id, 'taskname': task, 'status': status, 'category': category})
         return json.dumps({'taskname': id['taskname'], 'catgeory': id['category'], 'startdate': id['startdate'], 'duedate': id['duedate'], 'status': id['status'], 'hours': id['hours']}), 200, {
             'ContentType': 'application/json'}
     else:
