@@ -144,9 +144,10 @@ def deleteTask():
         task = request.form.get('task')
         status = request.form.get('status')
         category = request.form.get('category')
+        print("task, status, category ", task, status, category)
         id = mongo.db.tasks.find_one(
-            {'_id': user_id, 'taskname': task, 'status': status, 'category': category}, {'_id'})
-        print("Hereeeeeeeeeeeeeee", id['_id'])
+            {'user_id': user_id, 'taskname': task, 'status': status, 'category': category}, {'_id'})
+        print("id in delete task ",id)
         mongo.db.tasks.delete_one({'_id': id['_id']})
         return "Success"
     else:
@@ -162,7 +163,7 @@ def task():
     # Input: Task, Category, start date, end date, number of hours
     # Output: Value update in database and redirected to home login page
     # ##########################
-    if session.get('email'):
+    if session.get('user_id'): 
         form = TaskForm()
         if form.validate_on_submit():
             print("inside form")
@@ -217,7 +218,8 @@ def editTask():
         status = request.form.get('status')
         category = request.form.get('category')
         id = mongo.db.tasks.find_one(
-            {'_id': user_id, 'taskname': task, 'status': status, 'category': category})
+            {'user_id': user_id, 'taskname': task, 'status': status, 'category': category})
+        print("id in edit task ", id)
         return json.dumps({'taskname': id['taskname'], 'catgeory': id['category'], 'startdate': id['startdate'], 'duedate': id['duedate'], 'status': id['status'], 'hours': id['hours']}), 200, {
             'ContentType': 'application/json'}
     else:
@@ -232,7 +234,8 @@ def updateTask():
     # input: The function takes variious task values as Input
     # Output: Out function will redirect to the updateTask page
     # ##########################
-    if session.get('email'):
+    if session.get('user_id'):
+        print("params in updateTask ", request.url)
         params = request.url.split('?')[1].split('&')
         for i in range(len(params)):
             params[i] = params[i].split('=')
@@ -254,14 +257,15 @@ def updateTask():
 
         if form.validate_on_submit():
             if request.method == 'POST':
-                email = session.get('email')
+                user_str_id = session.get('user_id')
+                user_id = ObjectId(user_str_id)
                 taskname = request.form.get('taskname')
                 category = request.form.get('category')
                 startdate = request.form.get('startdate')
                 duedate = request.form.get('duedate')
                 hours = request.form.get('hours')
                 status = request.form.get('status')
-                mongo.db.tasks.update({'email': email, 'taskname': d['taskname'], 'startdate': d['startdate'], 'duedate': d['duedate']},
+                mongo.db.tasks.update({'user_id': user_id, 'taskname': d['taskname'], 'startdate': d['startdate'], 'duedate': d['duedate']},
                                       {'$set': {'taskname': taskname, 'startdate': startdate, 'duedate': duedate, 'category': category, 'status': status, 'hours': hours}})
             flash(f' {form.taskname.data} Task Updated!', 'success')
             return redirect(url_for('dashboard'))
@@ -279,7 +283,7 @@ def login():
     # Input: Email, Password, Login Type
     # Output: Account Authentication and redirecting to Dashboard
     # ##########################
-    if not session.get('email'):
+    if not session.get('user_id'):
         form = LoginForm()
         if form.validate_on_submit():
             temp = mongo.db.users.find_one({'email': form.email.data}, {
