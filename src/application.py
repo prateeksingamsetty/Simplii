@@ -220,7 +220,7 @@ def editTask():
         id = mongo.db.tasks.find_one(
             {'user_id': user_id, 'taskname': task, 'status': status, 'category': category})
         print("id in edit task ", id)
-        return json.dumps({'taskname': id['taskname'], 'catgeory': id['category'], 'startdate': id['startdate'], 'duedate': id['duedate'], 'status': id['status'], 'hours': id['hours']}), 200, {
+        return json.dumps({'taskname': id['taskname'], 'category': id['category'], 'startdate': id['startdate'], 'duedate': id['duedate'], 'status': id['status'], 'hours': id['hours']}), 200, {
             'ContentType': 'application/json'}
     else:
         return "Failed"
