@@ -112,7 +112,7 @@
                 <td>{{ item['taskname'] }}</td>
                 {% if item['status'] == 'Done' %}
                 <td style="background-color: lightgreen;">{{ item['status'] }}</td>
-                {% elif item['status'] == 'Blocked' %}
+                {% elif item['status'] == 'In Progress' %}
                 <td style="background-color: lightcoral;">{{ item['status'] }}</td>
                 {% else %}
                 <td style="background-color: lightblue;">{{ item['status'] }}</td>

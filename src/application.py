@@ -8,6 +8,7 @@ from flask import json
 from flask.helpers import make_response
 from flask.json import jsonify
 from flask_mail import Mail, Message
+from pymongo import ASCENDING
 from forms import ForgotPasswordForm, RegistrationForm, LoginForm, ResetPasswordForm, PostingForm, ApplyForm, TaskForm, UpdateForm
 import bcrypt
 import os
@@ -62,14 +63,82 @@ def recommend():
     # input: The function opens the task_recommendation.csv
     # Output: Our function will redirect to the recommend page for showing the data
     # ##########################
-    data = []
+    '''data = []
     with open(os.path.join(sys.path[0], "../models/task_recommendation.csv")) as f:
         reader = csv.DictReader(f)
 
         for row in reader:
             data.append(dict(row))
 
-    return render_template('recommend.html', data=data, list=list)
+    return render_template('recommend.html', data=data, list=list)'''
+
+
+    if session.get('user_id'):
+        user_str_id = session.get('user_id')
+        user_id = ObjectId(user_str_id)
+
+        # Fetch all tasks for the user and sort by 'duedate' in ascending order
+        tasks = list(mongo.db.tasks.find({'user_id': user_id}).sort('duedate', ASCENDING))
+
+        # Convert 'duedate' strings to datetime objects for sorting
+        for task in tasks:
+            task['duedate'] = datetime.strptime(task['duedate'], '%Y-%m-%d')
+
+        return render_template('recommend.html', title='Recommend', tasks=tasks)
+    else:
+        return redirect(url_for('home'))
+    
+
+
+
+@app.route("/send_email_reminders", methods=['GET', 'POST'])
+def send_email_reminders():
+    if session.get('user_id'):
+        if request.method == 'POST':
+            due_date = request.form.get('duedate')  # Get the due date input from the form
+            user_str_id = session.get('user_id')
+            user_id = ObjectId(user_str_id)
+
+            
+            # Convert the due date to a datetime object
+            #due_date = datetime.strptime(due_date, '%Y-%m-%d')
+
+            due_date=datetime.strptime(due_date, '%Y-%m-%d').date()
+            
+            
+
+            # Calculate the current date
+            current_date = datetime.now().date()
+
+            print("Due Date",type(due_date))
+            print("current_date",type(current_date))
+        
+
+            # Fetch tasks whose due date falls within the specified range
+            relevant_tasks = mongo.db.tasks.find({
+                'user_id': user_id,
+                'duedate': {'$gte': current_date, '$lte': due_date}
+            })
+
+            for task in relevant_tasks:
+            # Compose and send email reminders
+                subject = "Task Reminder"
+                recipients = [task['user_email']]  # Assuming you have a field for user email in tasks
+                message_body = render_template('reminder_email_template.html', task=task)
+
+                msg = Message(subject=subject, recipients=recipients, body=message_body)
+                mail.send(msg)
+
+            flash("Email reminders sent for tasks with due dates in the specified range.", 'success')
+
+        # Continue with the rest of the code to display tasks and the input field
+        # ...
+
+    else:
+        return redirect(url_for('home'))
+    return render_template('mailsent.html', title='Recommend')
+
+
 
 
 @app.route("/dashboard")
@@ -254,6 +323,19 @@ def updateTask():
         form.category.data = d['category']
         form.status.data = d['status']
         form.hours.data = d['hours']
+        
+        # Assuming that 'd['startdate']' and 'd['duedate']' are date strings in a format like 'YYYY-MM-DD'
+        # Convert them to datetime objects
+        startdate_str = d['startdate']
+        duedate_str = d['duedate']
+        # Convert to datetime objects
+        startdate_datetime = datetime.strptime(startdate_str, '%Y-%m-%d')
+        duedate_datetime = datetime.strptime(duedate_str, '%Y-%m-%d')
+
+        # Now, set the datetime objects in the form
+        form.startdate.data = startdate_datetime
+        form.duedate.data = duedate_datetime
+        
 
         if form.validate_on_submit():
             if request.method == 'POST':
