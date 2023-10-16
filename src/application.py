@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 from bson.objectid import ObjectId
+from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
+from werkzeug.security import generate_password_hash
 
 from tabulate import tabulate
 from flask_wtf import form
@@ -30,6 +32,9 @@ app.config['MAIL_USERNAME'] = "dummysinghhh@gmail.com"
 app.config['MAIL_PASSWORD'] = "wbjf dsfu mper nqfv"
 mail = Mail(app)
 
+# Initialize the URLSafeTimedSerializer with your secret key and a salt
+serializer = URLSafeTimedSerializer('your_secret_key', salt='password-reset')
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -44,8 +49,46 @@ def home():
     else:
         return redirect(url_for('login'))
 
+# Reset Password route
+@app.route("/resetPassword/<token>", methods=['GET', 'POST'])
+def resetPassword(token):
+    if request.method == 'GET':
+        try:
+            # Verify the token and get the associated email
+            email = serializer.loads(token, max_age=3600)  # Max age in seconds (1 hour)
 
-@app.route("/forgotPassword")
+            # Here, you can add code to identify the user by their email and present a password reset form
+            # For example, you can store the email in a session or a hidden form field to ensure it's the same user
+
+            return render_template('resetPassword.html', email=email)
+
+        except SignatureExpired:
+            flash('The password reset link has expired.', 'error')
+            return redirect(url_for('forgotPassword'))
+        except BadSignature:
+            flash('Invalid password reset link.', 'error')
+            return redirect(url_for('forgotPassword'))
+
+    elif request.method == 'POST':
+        email = request.form.get('email')
+        new_password = request.form.get('new_password')
+        new_password = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt())
+        # Update the user's password in the database
+        user = mongo.db.users.find_one({'email': email})
+        if user:
+            user_id = user['_id']
+            # Update the password for the user with the specified ID
+            mongo.db.users.update_one(
+                {"_id": user_id},
+                {"$set": {"pwd": new_password}}
+            )
+
+            flash('Password reset successful. You can now log in with your new password.', 'success')
+            return redirect(url_for('login'))
+
+    return render_template('resetPassword.html')
+
+@app.route("/forgotPassword", methods=['GET', 'POST'])
 def forgotPassword():
     ############################
     # forgotPassword() redirects the user to dummy template.
@@ -53,7 +96,33 @@ def forgotPassword():
     # input: The function takes session as the input
     # Output: Out function will redirect to the dummy page
     # ##########################
-    return redirect(url_for('dummy'))
+    if not session.get('user_id'):
+        form = ForgotPasswordForm()
+        if form.validate_on_submit():
+            if request.method == 'POST':
+                email = request.form.get('email')
+                # id = mongo.db.users.find_one({'email': email})
+                user = mongo.db.users.find_one({'email': email})
+                if user:
+                    # Generate a reset token
+                    reset_token = serializer.dumps(email, salt='password-reset')
+
+                    # Store the reset token in the user's document in the database
+                    mongo.db.users.update_one({'_id': user['_id']}, {'$set': {'reset_token': reset_token}})
+
+                    # Send a reset password email
+                    reset_link = url_for('resetPassword', token=reset_token, _external=True)
+                    msg = Message('Password Reset', sender=app.config['MAIL_USERNAME'], recipients=[email])
+                    msg.body = f'Visit the following link to reset your password: {reset_link}'
+                    mail.send(msg)
+
+                    flash('Password reset link sent to your email.', 'info')
+                else:
+                    flash('Email address not found.', 'error')
+        
+    else:
+        return redirect(url_for('home'))
+    return render_template('forgotPassword.html', title='Register', form=form)
 
 
 @app.route("/recommend")
@@ -194,18 +263,18 @@ def register():
                 email = request.form.get('email')
                 password = request.form.get('password')
                 mongo.db.users.insert_one({'name': username, 'email': email, 'pwd': bcrypt.hashpw(
-                    password.encode("utf-8"), bcrypt.gensalt()), 'tasksList':[]})
-            msg = Message('Welcome to Simplii: Your Task Scheduling Companion', sender='dummysinghhh@gmail.com', recipients=['dummysinghhh@gmail.com'])
-            msg.body = f"Hey {username},\n\n" \
-           "We're excited to welcome you to Simplii, your new task scheduling companion. Simplii is here to help you stay organized, meet deadlines, and achieve your goals efficiently.\n\n" \
-           "With Simplii, you can schedule your tasks, set deadlines, and work on them with ease. Never miss an important deadline again!\n\n" \
-           "Thank you for choosing Simplii. We're thrilled to have you on board. If you have any questions or need assistance, feel free to reach out to us.\n\n" \
-           "Best regards,\n" \
-           "The Simplii Team"
-            mail.send(msg)
-            print("Message sent!")
-            flash(f'Account created for {form.username.data}!', 'success')
-            return redirect(url_for('home'))
+                    password.encode("utf-8"), bcrypt.gensalt()), 'tasksList':[], 'temp': None})
+                msg = Message('Welcome to Simplii: Your Task Scheduling Companion', sender='dummysinghhh@gmail.com', recipients=['dummysinghhh@gmail.com'])
+                msg.body = f"Hey {username},\n\n" \
+                "We're excited to welcome you to Simplii, your new task scheduling companion. Simplii is here to help you stay organized, meet deadlines, and achieve your goals efficiently.\n\n" \
+                "With Simplii, you can schedule your tasks, set deadlines, and work on them with ease. Never miss an important deadline again!\n\n" \
+                "Thank you for choosing Simplii. We're thrilled to have you on board. If you have any questions or need assistance, feel free to reach out to us.\n\n" \
+                "Best regards,\n" \
+                "The Simplii Team"
+                mail.send(msg)
+                print("Message sent!")
+                flash(f'Account created for {form.username.data}!', 'success')
+                return redirect(url_for('home'))
     else:
         return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
@@ -386,7 +455,7 @@ def login():
             if temp is not None and temp['email'] == form.email.data and (
                 bcrypt.checkpw(
                     form.password.data.encode("utf-8"),
-                    temp['pwd']) or temp['temp'] == form.password.data):
+                    temp['pwd'])): #or temp['temp'] == form.password.data
                 flash('You have been logged in!', 'success')
                 session['email'] = temp['email']
                 session['name'] = temp['name']

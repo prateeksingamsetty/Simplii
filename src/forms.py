@@ -24,6 +24,11 @@ class RegistrationForm(FlaskForm):
         temp = mongo.db.ath.find_one({'email': email.data}, {'email', 'pwd'})
         if temp:
             raise ValidationError('Email already exists!')
+        
+class ForgotPasswordForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    submit = SubmitField('Reset Password')
 
 
 class TaskForm(FlaskForm):
@@ -153,9 +158,9 @@ class ApplyForm(FlaskForm):
     submit = SubmitField('APPLY')
 
 
-class ForgotPasswordForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    submit = SubmitField('Submit')
+# class ForgotPasswordForm(FlaskForm):
+#     email = StringField('Email', validators=[DataRequired(), Email()])
+#     submit = SubmitField('Submit')
 
 
 class ResetPasswordForm(FlaskForm):
