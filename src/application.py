@@ -1,7 +1,15 @@
 from datetime import datetime, timedelta
+from smtplib import SMTPException
 from bson.objectid import ObjectId
 from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
+import pytz
 from werkzeug.security import generate_password_hash
+import schedule
+import time
+import atexit
+
+from apscheduler.schedulers.background import BackgroundScheduler
+
 from tabulate import tabulate
 from flask_wtf import form
 from flask import app, render_template, session, url_for, flash, redirect, request, Response, Flask
@@ -32,7 +40,56 @@ app.config['MAIL_PASSWORD'] = "wbjf dsfu mper nqfv"
 mail = Mail(app)
 
 # Initialize the URLSafeTimedSerializer with your secret key and a salt
-serializer = URLSafeTimedSerializer('your_secret_key', salt='password-reset')
+serializer = URLSafeTimedSerializer(app.secret_key, salt='password-reset')
+
+scheduler = BackgroundScheduler()
+
+def fetch_tasks():
+    print("fetch_tasks called")
+    # Calculate the current date
+    current_date = datetime.now().date()
+
+    # Calculate the date 7 days from now
+    seven_days_later = current_date + timedelta(days=7)
+
+    users = mongo.db.users.find()
+    with app.app_context():  # Create an application context
+        for u in users:
+            relevant_tasks = mongo.db.tasks.find({
+                'user_id': u['_id'],
+                'duedate': {
+                    # '$gte': current_date.strftime('%Y-%m-%d'),
+                    '$lte': seven_days_later.strftime('%Y-%m-%d')
+                }
+            }).sort('duedate', 1)
+
+            tasksListContent = list(relevant_tasks)
+
+            table_html = "<table border='1'><tr><th>Task Name</th><th>Category</th><th>Start Date</th><th>Due Date</th><th>Status</th><th>Hours</th></tr>"
+            for user_tasks in tasksListContent:
+                # Create an HTML table from the task data
+                table_html += f"<tr><td>{user_tasks['taskname']}</td><td>{user_tasks['category']}</td><td>{user_tasks['startdate']}</td><td>{user_tasks['duedate']}</td><td>{user_tasks['status']}</td><td>{user_tasks['hours']}</td></tr>"
+            table_html += "</table>"
+
+            # Compose the email
+            msg = Message('Welcome to Simplii: Your Task Scheduling Companion', sender='dummysinghhh@gmail.com', recipients=[u['email']])
+
+            # Create the text version of the email with the table
+            email_body = f"Here are your tasks due in next 7 days:\n\n{table_html}"
+            msg.html = email_body
+            try:
+                mail.send(msg)  # Attempt to send the email
+                print(f"Email sent to {u['email']} successfully.")
+            except SMTPException as e:
+                # Handle SMTP errors
+                print(f"Failed to send email to {u['email']}. Error: {str(e)}")
+            except Exception as e:
+                # Handle other exceptions
+                print(f"An error occurred while sending an email to {u['email']}. Error: {str(e)}")
+
+
+    # flash("Email reminders sent for tasks with due dates in the specified range.", 'success')
+    print('***************')
 
 @app.route("/")
 @app.route("/home")
@@ -190,11 +247,6 @@ def recommend():
 
         # Fetch all tasks for the user and sort by 'duedate' in ascending order
         tasks = list(mongo.db.tasks.find({'user_id': user_id}).sort('duedate', ASCENDING))
-        print("tasks in app.py ", tasks)
-        # Convert 'duedate' strings to datetime objects for sorting
-        # for task in tasks:
-        #     task['duedate'] = datetime.strptime(task['duedate'], '%Y-%m-%d')
-
         return render_template('recommend.html', title='Recommend', tasks=tasks)
     else:
         return redirect(url_for('home'))
@@ -249,15 +301,6 @@ def send_email_reminders():
             'user_id': user_id,
         })
         return render_template('recommend.html', tasks=tasks)
-        # else:
-        #     # Fetch tasks whose due date falls within the specified range
-        #     user_str_id = session.get('user_id')
-        #     user_id = ObjectId(user_str_id)
-        #     tasks = mongo.db.tasks.find({
-        #         'user_id': user_id,
-        #     })
-        #     return redirect(url_for('recommend'))
-
     else:
         return redirect(url_for('home'))
 
@@ -277,7 +320,6 @@ def dashboard():
     if session.get('user_id'):
         tasks = mongo.db.tasks.find({'user_id': ObjectId(session.get('user_id'))})
     return render_template('dashboard.html', tasks=tasks)
-
 
 @app.route("/about")
 def about():
@@ -542,6 +584,7 @@ def dummy():
     return response"""
     return "Page Under Maintenance"
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    scheduler.add_job(func=fetch_tasks, trigger="cron", day_of_week = "*", hour = 00, minute = 00)
+    scheduler.start()
+    app.run(debug=True, use_reloader = False)
