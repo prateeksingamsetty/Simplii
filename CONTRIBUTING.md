@@ -1,8 +1,8 @@
 # Contributing to Simplii 4.0!!
 <h3>Hello!👋</h3>
-![giphy](https://github.com/prateeksingamsetty/Simplii/assets/60955399/887bf34f-9a82-4c80-a7b1-b2162de5e631)
 
-<p>Firstly, thank you so much for showing interest in Simplii 3.0 and contributing to our project.👍</p>
+
+<p>We appreciate your enthusiasm to contribute to Simplii 4.0. Before you go ahead, kindly discuss the changes you wish to make through issues, discussions, or email. Also, make sure you check out our [Code of Conduct](#code-of-conduct) to contribute and participate in this project</p>
 The following are a set of guidelines for contributing to Simplii. We are open to suggestions to enhance our project so feel free to propose changes to this document in a pull request.
 
 
