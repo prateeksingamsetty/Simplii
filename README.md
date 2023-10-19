@@ -19,7 +19,7 @@ https://youtu.be/GecaW1x1y8k
 Introducing Simplii, the almost perfect task management solution. It is similar to having a personal assistant, just like Tony Stark's Jarvis minus its witty quips. Without magic spells or secret societies, Simplii is your go-to partner in task management when it comes to productivity and organization. With Simplii, organizing your to-do list is as effortless as James Bond's flawless style, without the high-speed chases or secret spy devices. If you are prepared to transform an average day into an exceptional day, with the power of the God of Thunder, Thor, or with the determination of Captain America, Simplii let Simplii be your guide to the path of productivity.
 
 <p align="center">
-<img width="614" alt="Screen Shot 2021-12-03 at 10 11 02 PM" src="https://user-images.githubusercontent.com/89509351/144695927-bf2e2524-5723-46d2-a946-4aab3bc6931e.png">
+<img width="614"  src="./assets/thor.gif">
 </p>
 
 
