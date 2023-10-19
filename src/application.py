@@ -126,58 +126,23 @@ def resetPassword(token):
             return redirect(url_for('forgotPassword'))
 
     elif request.method == 'POST':
-      
-        #checking if old and new passwords are same or not if not same then updating
-
         email = request.form.get('email')
-        #old_password = request.form.get('old_password')  # Input for the old password
-        new_password=request.form.get('new_password')
-        
-        #new_password.encode("utf-8"), bcrypt.gensalt()
-        # Retrieve the user from the database based on the email
+        new_password = request.form.get('new_password')
+        new_password = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt())
+        # Update the user's password in the database
         user = mongo.db.users.find_one({'email': email})
-        
         if user:
-            
-            #session.get('user_id')
-            # Check if the old password matches the stored hashed password
-            #user_id = user['_id']
+            user_id = user['_id']
+            # Update the password for the user with the specified ID
+            mongo.db.users.update_one(
+                {"_id": user_id},
+                {"$set": {"pwd": new_password}}
+            )
 
-            #id = mongo.db.tasks.find_one(
-            #{  'password': password, 'taskname': task, 'status': status, 'category': category}, {'_id'})
+            flash('Password reset successful. You can now log in with your new password.', 'success')
+            return redirect(url_for('login'))
 
-            stored_password = user['pwd']  # Assuming the stored password field is named 'pwd'
-            #stored_password=bcrypt.hashpw(stored_password.encode("utf-8"), bcrypt.gensalt())
-            new_password = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt())
-            
-            
-            if  bcrypt.checkpw(new_password, stored_password):
-
-                # Update the password for the user with the specified ID
-                
-                
-                user_id = user['_id']
-                mongo.db.users.update_one(
-                    {"_id": user_id},
-                    {"$set": {"pwd": new_password}}
-                )   
-
-                flash('Password reset successful. You can now log in with your new password.', 'success')
-                return redirect(url_for('login'))
-        
-              
-                
-            else:
-
-                reset_token = user['reset_token']
-                reset_link = url_for('resetPassword', token=reset_token, _external=True)
-                
-                print("----**False***---------")
-                flash('Old password does not match. Please try again.', 'danger')
-                return redirect(reset_link)
-                
-        else:
-            flash('User not found. Please check your email.', 'danger')
+    return render_template('resetPassword.html')
 
 # Handle cases where the user is not found or the old password doesn't match
 # You can redirect to an appropriate page or display an error message.
