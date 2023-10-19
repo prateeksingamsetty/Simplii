@@ -147,7 +147,6 @@ def resetPassword(token):
 # Handle cases where the user is not found or the old password doesn't match
 # You can redirect to an appropriate page or display an error message.
 
-
 @app.route("/forgotPassword", methods=['GET', 'POST'])
 def forgotPassword():
     ############################
@@ -196,15 +195,7 @@ def recommend():
     # input: The function opens the task_recommendation.csv
     # Output: Our function will redirect to the recommend page for showing the data
     # ##########################
-    '''data = []
-    with open(os.path.join(sys.path[0], "../models/task_recommendation.csv")) as f:
-        reader = csv.DictReader(f)
-
-        for row in reader:
-            data.append(dict(row))
-
-    return render_template('recommend.html', data=data, list=list)'''
-
+   
 
     if session.get('user_id'):
         user_str_id = session.get('user_id')
