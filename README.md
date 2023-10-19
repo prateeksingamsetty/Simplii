@@ -12,11 +12,11 @@
 ## Link to Demonstration Video of the Project: 
 https://youtu.be/GecaW1x1y8k
 
-# SIMPLII
+# SIMPLII 4.0
 
-<h3>Having trouble in keeping track of your daily tasks and managing them? </h3>
+<h3>Are you trying to manage tasks? Simplii keep track of them, with all new Simplii 4.0!!! </h3>
 
-Introducing to Simplii- an online task tracker that will assist you in keeping track of all your day-to-day activity so that you can manage your work efficiently. Task-tracking can be a tardy process and we have fixed this pain with the help of Simplii. Organize your work, track time, and update the status of your tasks simply with our easy-to-use application.
+Introducing to Simplii- an online task tracker that will assist you in keeping track of all your day-to-day activity so that you can manage your work efficiently. Task-tracking can be a tardy process and we have fixed this pain with the help of Simplii. Organize your work, track time, and update the status of your tasks, get reminders and keep yourself on track **simplii** with our easy-to-use application.
 
 <p align="center">
 <img width="614" alt="Screen Shot 2021-12-03 at 10 11 02 PM" src="https://user-images.githubusercontent.com/89509351/144695927-bf2e2524-5723-46d2-a946-4aab3bc6931e.png">
