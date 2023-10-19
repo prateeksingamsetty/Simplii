@@ -1,17 +1,16 @@
-<h2> Changes made in Phase 2 </h2>
+<h2> Changes made in Simplii 4.0 </h2>
 
 <ol>
-  <li>Landing page has been created.</li>
-  <li>Database has been added to the system for better data management.</li>
-  <li>Multi-user functionality added with usage of database.</li>
-  <li>To facilitate multi-user functionality, login, sign-up and logout features are added.</li>
-  <li>Resolved feature request of e-mail functionality. This allows users to receive list of tasks via e-mail.</li>
-  <li>Fixed the time-stamp issue from previous phase.</li>
+  <li>Reset Password functionality has been implemented</li>
+  <li>Task categories and status list has been modified to fit most needs of people</li>
+  <li>Different status are now indicated by different colours</li>
+  <li>In the upcoming tasks section, user can look at the list of tasks in the order of earliest deadline to farthest deadline</li>
+  <li>Users recieve an email regarding upcoming tasks when they select a date in the upcoming tasks section.</li>
   <li>Multiple test cases added.
     <ul>
-      <li>Login</li>
-      <li>Signup</li>
-      <li>Database Connection</li>
+      <li>Reset Password</li>
+      <li>Update Task</li>
+      <li>Upcoming Tasks Reminder Email</li>
     </ul>
   </li>
   <li>Improved repository with multiple badges indicating development status of project.</li>
