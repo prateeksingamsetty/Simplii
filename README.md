@@ -105,23 +105,43 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
 <p> Once you login, you see your dashboard </p>
 <p align="center"><img width="700" src="./assets/Dashboard Page.png"></p>
 
-### User Interface: About
+### User Interface: About Page
 <p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
 <p align="center"><img width="700" src="./assets/About Page.png"></p>
- 
- ## Task Recommendation and Display:
- 
- 
 
-https://user-images.githubusercontent.com/89509351/144703718-a2f478e3-b4ea-4fa2-a784-9a3b5c335a57.mp4
+## User Interface: Add Task Page
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/Task Page.png"></p>
+
+## User Interface: Edit Task Page
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/Edit Page.png"></p>
+
+## User Interface: Deadlines
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/Deadlines.png"></p>
+
+## User Interface: Tasks Due Email
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/Tasks Due email.png"></p>
+
+## User Interface: Mail for Password Reset Link
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/Password Reset Link.png"></p>
+
+## User Interface: Password Reset Successful
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/PasswordResetSuccessful.png"></p>
+
+## User Interface: MongoDB Users Table
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/MongoDB Compass Users Table.png"></p>
+
+## User Interface: MongoDB Tasks Table
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/MongoDB Compass Tasks Table.png"></p>
  
  
- ## Modifying the tasks - Updating and Deleting:
- 
-
-https://user-images.githubusercontent.com/89509351/144703727-e757e3e4-3776-470f-b08f-516593cb861e.mp4
-
-
 
 
 ## Steps for execution
