@@ -16,7 +16,7 @@ https://youtu.be/GecaW1x1y8k
 
 <h3>Are you trying to manage tasks? Simplii keep track of them, with all new Simplii 4.0!!! </h3>
 
-Introducing to Simplii- an online task tracker that will assist you in keeping track of all your day-to-day activity so that you can manage your work efficiently. Task-tracking can be a tardy process and we have fixed this pain with the help of Simplii. Organize your work, track time, and update the status of your tasks, get reminders and keep yourself on track **simplii** with our easy-to-use application.
+Introducing Simplii, the almost perfect task management solution. It is similar to having a personal assistant, just like Tony Stark's Jarvis minus its witty quips. Without magic spells or secret societies, Simplii is your go-to partner in task management when it comes to productivity and organization. With Simplii, organizing your to-do list is as effortless as James Bond's flawless style, without the high-speed chases or secret spy devices. If you are prepared to transform an average day into an exceptional day, with the power of the God of Thunder, Thor, or with the determination of Captain America, Simplii let Simplii be your guide to the path of productivity.
 
 <p align="center">
 <img width="614" alt="Screen Shot 2021-12-03 at 10 11 02 PM" src="https://user-images.githubusercontent.com/89509351/144695927-bf2e2524-5723-46d2-a946-4aab3bc6931e.png">
