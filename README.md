@@ -87,14 +87,11 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
 </table>
 
 
-## Core Functionalities of the Application:
+## Enhancements you can't miss!🔥:
  
- ## Register:
- 
-
-https://user-images.githubusercontent.com/89509351/144703691-aa8a10cd-db81-48f9-bc21-467f82a53378.mp4
-
-
+ ### User Interface: Register 
+<p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
+<p align="center"><img width="700" src="./assets/Registration Page.pn"></p>
  
  ## Login:
  https://user-images.githubusercontent.com/89509351/144703694-09252613-a2f7-4dff-a574-b4a20cb69fd4.mp4
