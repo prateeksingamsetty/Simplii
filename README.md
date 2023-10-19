@@ -5,27 +5,27 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://app.travis-ci.com/atharva1996/Simplii.svg?branch=main)](https://app.travis-ci.com/atharva1996/Simplii)
 ![Code Coverage](https://github.com/prateeksingamsetty/Simplii/blob/main/src/coverage.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/style_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 
 ## Link to Demonstration Video of the Project: 
 https://youtu.be/GecaW1x1y8k
 
-# SIMPLII
+# SIMPLII 4.0
 
-<h3>Having trouble in keeping track of your daily tasks and managing them? </h3>
+<h3>Are you trying to manage tasks? Simplii keep track of them, with all new Simplii 4.0!!! </h3>
 
-Introducing to Simplii- an online task tracker that will assist you in keeping track of all your day-to-day activity so that you can manage your work efficiently. Task-tracking can be a tardy process and we have fixed this pain with the help of Simplii. Organize your work, track time, and update the status of your tasks simply with our easy-to-use application.
+Introducing Simplii, the almost perfect task management solution. It is similar to having a personal assistant, just like Tony Stark's Jarvis minus its witty quips. Without magic spells or secret societies, Simplii is your go-to partner in task management when it comes to productivity and organization. With Simplii, organizing your to-do list is as effortless as James Bond's flawless style, without the high-speed chases or secret spy devices. If you are prepared to transform an average day into an exceptional day, with the power of the God of Thunder, Thor, or with the determination of Captain America, Simplii let Simplii be your guide to the path of productivity.
 
 <p align="center">
-<img width="614" alt="Screen Shot 2021-12-03 at 10 11 02 PM" src="https://user-images.githubusercontent.com/89509351/144695927-bf2e2524-5723-46d2-a946-4aab3bc6931e.png">
+<img width="614"  src="./assets/thor.gif">
 </p>
 
 
 # Table of Contents  
 
-- [Why use Simplii?](#why-use-simplii)
+- [Why Simplii?](#why-use-simplii)
 - [Implementation](#implementation)
 - [Built with:](#built-with)
 - [Core Functionalities of the Application:](#core-functionalities-of-the-application)
@@ -42,15 +42,19 @@ Introducing to Simplii- an online task tracker that will assist you in keeping t
 - [Contribution](#contribution)
 - [License](#license)
 
-## Why use Simplii?
+## Why Simplii?
 
--User can add tasks based on their difficulty levels- Physical or Intellectual work and then work on it depending on their priority.<br>
--User can keep a track of the upcoming tasks by checking their deadlines and then work towards it.<br>
--User can easily check the progress of his work by checking the status tab.<br>
--Tasks are recommended to the users based on their upcoming deadlines for the user's convenience.<br>
+-Simplii has a user-friendly UI, equally appealing to people of all ages and also people learning to use technology.
+-Multi-User Login
+-User can add new tasks based on their category.<br>
+-Users can update tasks as and when they work on them.<br>
+-User can keep track of not just work that is in progress, but also completed tasks.<br>
+-Tasks can be viewed based on the priority of the deadline.<br>
+-Users can set up email reminders when a task approaches a deadline.<br>
+-Most importantly, with simplii, users are always up for a stress-free outing!!!
 
-<p align= "center">
-<img width="600" height ="500" src="https://user-images.githubusercontent.com/89509351/144696048-8968db92-e41a-44b1-a720-66a482e0ed4a.png"> 
+<p align="center">
+<img width="614"  src="./assets/friends-hangout.gif">
 </p>
 
 
