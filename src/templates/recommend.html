@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 {% extends "layout.html" %}
 {% block content %}
-    
-    <form method="POST" action="{{ url_for('send_email_reminders') }}">
-        <div>
-            <label for="dueDate">Enter Due Date:</label>
-            <input type="date" id="duedate" name="duedate">
-            <button type="submit">Send Email Reminders</button>
-        </div>
-        <!-- <button type="submit">Send Email Reminders</button> -->
-    </form>
     <br>
     <div class='container'>
         <h1>Task Recommendations</h1>

@@ -133,18 +133,12 @@ def resetPassword(token):
         #old_password = request.form.get('old_password')  # Input for the old password
         new_password=request.form.get('new_password')
         
-        #new_password.encode("utf-8"), bcrypt.gensalt()
+       
         # Retrieve the user from the database based on the email
         user = mongo.db.users.find_one({'email': email})
         
         if user:
             
-            #session.get('user_id')
-            # Check if the old password matches the stored hashed password
-            #user_id = user['_id']
-
-            #id = mongo.db.tasks.find_one(
-            #{  'password': password, 'taskname': task, 'status': status, 'category': category}, {'_id'})
 
             stored_password = user['pwd']  # Assuming the stored password field is named 'pwd'
             #stored_password=bcrypt.hashpw(stored_password.encode("utf-8"), bcrypt.gensalt())
@@ -231,15 +225,7 @@ def recommend():
     # input: The function opens the task_recommendation.csv
     # Output: Our function will redirect to the recommend page for showing the data
     # ##########################
-    '''data = []
-    with open(os.path.join(sys.path[0], "../models/task_recommendation.csv")) as f:
-        reader = csv.DictReader(f)
-
-        for row in reader:
-            data.append(dict(row))
-
-    return render_template('recommend.html', data=data, list=list)'''
-
+   
 
     if session.get('user_id'):
         user_str_id = session.get('user_id')
