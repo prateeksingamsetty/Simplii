@@ -54,12 +54,7 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 -Most importantly, with simplii, users are always up for a stress-free outing!!!
 
 <p align="center">
-<img width="614"  src="./assets/friends-outing.gif">
-</p>
-
-
-<p align= "center">
-<img width="600" height ="500" src="https://user-images.githubusercontent.com/89509351/144696048-8968db92-e41a-44b1-a720-66a482e0ed4a.png"> 
+<img width="614"  src="./assets/friends-hangout.gif">
 </p>
 
 
