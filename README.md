@@ -5,8 +5,8 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://app.travis-ci.com/atharva1996/Simplii.svg?branch=main)](https://app.travis-ci.com/atharva1996/Simplii)
-([![Running Code Coverage](https://github.com/prateeksingamsetty/Simplii/actions/workflows/code_cov.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/code_cov.yml))
-![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)
+[![Running Code Coverage](https://github.com/prateeksingamsetty/Simplii/actions/workflows/code_cov.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/code_cov.yml)
+[![Python Style Checker](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml)
 ![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
 ![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 
