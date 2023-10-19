@@ -9,8 +9,6 @@
 ![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
 ![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 
-## Link to Demonstration Video of the Project: 
-https://youtu.be/GecaW1x1y8k
 
 # SIMPLII 4.0
 
@@ -21,6 +19,9 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 <p align="center">
 <img width="614"  src="./assets/thor.gif">
 </p>
+
+## Link to Demonstration Video of the Project: 
+https://vimeo.com/875832522/1daee2aef8?share=copy
 
 
 # Table of Contents  
@@ -57,19 +58,6 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 <img width="614"  src="./assets/friends-hangout.gif">
 </p>
 
-
-
-## Implementation:
-The video below describes the previous version of Simplii
-
-https://user-images.githubusercontent.com/89509351/144701576-5f2d6677-a741-4d58-b1fe-9a2b012f2b8e.mp4
-
-As you walk through this old version of Simplii, you can observe many errors. Firstly, when the user adds a task, it gets displayed 3 times on the dashboard. Moreover, when the user tries to delete the task, all the tasks in the dashboard get deleted instead of just deleting that single task
-
-In the new version of Simplii, we have resolved all these bugs and added new functionalities.
-
- 
- 
 
 
 
@@ -179,24 +167,21 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
   Link to the repository:
     https://github.com/prateeksingamsetty/Simplii.git
                                                                                                                                                   
- ## Delta
  
- <b> a) Task Tracking based on the type of work</b>
-        <li>The earlier version of Simplii just used to do the simple task of keeping track of different kinds of task. However, there was no functionality to                  differentiate the tasks.
-        <li>In our updated version of Simplii, the tasks can be tracked based on their types. 
-                For instance, there are two types of tasks- Physical and Intellectual, so the users can easily keep  track of their tasks based on the work                         type.
+  ## Delta
+ 
+ <b> a) Welcome email</b>
+        <li>The earlier version of Simplii had a register functionality. After registering user can continue to login.
+        <li>In our updated version of Simplii, after the user registers, he/she is redirected to login. However, they also recieve a welcome email from team Simplii.
     
- <b>b) Task modification is now simplified!</b>
-        <li>In the previous version of Simplii, the tasks did not have the modification functionality in which the user could update some details of his task.                  Moreover, the delete functionality completely failed. When the user tried to delete one task, all his other tasks would get deleted. Thus, it was                   highly  inefficient.
-        <li>In our updated version of Simplii, we have eliminated that bug by adding the modification function where the users can easily update and delete the                 tasks as per their convenience.
+ <b>b) Forgot Password Functionality</b>
+        <li>In the previous version of Simplii, there was no forgot password option
+        <li>In our updated version of Simplii, we have the forgot password functionality and an email is sent to the user with a link to reset their password.
     
- <b>c) Status Tab is added so that users can easily keep a progress of their work.</b>
-        <li>In the previous version of Simplii, there was no functionality of viewing the status of jobs and then segregating them based on their status.
-        <li>In our updated version of Simplii, we have added the status tab on dashboard and also created a drop-down functionality so that the users can view                 tasks and update them by selecting the task category(Physical or Intellectual) and the task status(In progress, Done, Blocked).</b>
+ <b>c) Recommendations Tab has been changed to Deadlines Tab.</b>
+        <li>In the previous version of Simplii, there was a recommendation tab that showed upcoming tasks. However it was hardcoded.
+        <li>In our updated version of Simplii, we changed the recommendation tab to deadlines tab. User can view upcoming tasks based on the date they choose and can recieve email consisting of upcoming dues within the date chosen</b>
         
- <b>d) Task Recommendation functionality </b>
-        <li>In the previous version of Simplii, tasks were not recommended to the user and thus, the user was unable to keep a track of his progress.
-        <li>In this updated version of Simplii, there is a functionality of task recommendation where tasks will be recommended in an order such that the user can complete each of them in the given time frame. Thus, all the tasks will get managed and user will not have to worry about his schedule.</li>
     
    ## Future Scope
   
@@ -205,8 +190,7 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
    1. Create a mobile application for the web version of the application.
    2. Make the website view port adaptable - the website should look good on phone, tablet and computer.
    3. Create chatbot for the web portal
-   4. Create Alerts when the Task deadline is approaching
-   5. Add an emergency schedule and recommend tasks based on the new schedule.
+   4. Add an emergency schedule and recommend tasks based on the new schedule.
    
    ## Team Members
    
