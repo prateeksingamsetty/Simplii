@@ -87,38 +87,61 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
 </table>
 
 
-## Core Functionalities of the Application:
+## Enhancements you can't miss!🔥:
  
- ## Register:
- 
+ ### User Interface: Register 
+<p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
+<p align="center"><img width="700" src="./assets/Registration Page.png"></p>
 
-https://user-images.githubusercontent.com/89509351/144703691-aa8a10cd-db81-48f9-bc21-467f82a53378.mp4
-
-
+ ### User Interface: Welcome Email 
+<p> Once your register for Simplii, you get a welcome email from us appreciating your interest in using our website and welcoming you onboard. </p>
+<p align="center"><img width="700" src="./assets/AccountCreatingEmail.png"></p>
  
- ## Login:
- https://user-images.githubusercontent.com/89509351/144703694-09252613-a2f7-4dff-a574-b4a20cb69fd4.mp4
+### User Interface: Login 
+<p> Once you create an account, you can login to the website using your credentials </p>
+<p align="center"><img width="700" src="./assets/Login Page.png"></p>
  
- ## Adding Tasks:
- 
+ ### User Interface: Dashboard
+<p> Once you login, you see your dashboard </p>
+<p align="center"><img width="700" src="./assets/Dashboard Page.png"></p>
 
-https://user-images.githubusercontent.com/89509351/144703705-0628f2a2-8004-442c-8612-a5de40de92be.mp4
+### User Interface: About Page
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/About Page.png"></p>
 
+## User Interface: Add Task Page
+<p> When you click on the add task on the navigation bar, you are redicrected to a page that consists of a form. Here, you can fill the details regarding the task you want to add and click on add task. The task is added to the database and you can view it on the dashboard </p>
+<p align="center"><img width="700" src="./assets/Task Page.png"></p>
 
- 
- ## Task Recommendation and Display:
- 
- 
+## User Interface: Edit Task Page
+<p> When you view the task on the dashboard, you can see the option to edit the task details. When you click on edit, the edit task form opens up and you can make necessary changes to the task details and update them. </p>
+<p align="center"><img width="700" src="./assets/Edit Page.png"></p>
 
-https://user-images.githubusercontent.com/89509351/144703718-a2f478e3-b4ea-4fa2-a784-9a3b5c335a57.mp4
+## User Interface: Deadlines
+<p> When you click on the deadline tab on the navigation bar, you are redirected to the deadlines page. This page consists of all your tasks in the order of earliest due to the farthest due. In this page you can also choose a date and get an email regarding the tasks that are due within the date chosen. </p>
+<p align="center"><img width="700" src="./assets/Deadlines.png"></p>
+
+## User Interface: Tasks Due Email
+<p> When you choose a date and click on get email, you get an email regarding the tasks due. A sample of the email is shown below. </p>
+<p align="center"><img width="700" src="./assets/Tasks Due email.png"></p>
+
+## User Interface: Mail for Password Reset Link
+<p> Another new feature that has been added is the forgot password. When you click on forget password, you recieve a password reset link to your email. A sample email is shown below. </p>
+<p align="center"><img width="700" src="./assets/Password Reset Link.png"></p>
+
+## User Interface: Password Reset Successful
+<p> When you click on the link sent to you via email, you are redirected to a password reset page and once you click on reset, you are directed to the login page and the following message is displayed showing a successful password change. </p>
+<p align="center"><img width="700" src="./assets/PasswordResetSuccessful.png"></p>
+
+## MongoDB Users Table
+<p> For Simplii we used MongoDB for backend. The following image shows how the users details are stored in the database.</p>
+<p align="center"><img width="700" src="./assets/MongoDB Compass Users Table.png"></p>
+
+## MongoDB Tasks Table
+<p> For each user, we store their tasks in the database. The following image shows how the tasks are stored in the database. </p>
+<p align="center"><img width="700" src="./assets/MongoDB Compass Tasks Table.png"></p>
  
  
- ## Modifying the tasks - Updating and Deleting:
- 
-
-https://user-images.githubusercontent.com/89509351/144703727-e757e3e4-3776-470f-b08f-516593cb861e.mp4
-
-
 
 
 ## Steps for execution

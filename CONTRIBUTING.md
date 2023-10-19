@@ -1,6 +1,8 @@
-# Contributing to Simplii 3.0!!
+# Contributing to Simplii 4.0!!
 <h3>Hello!👋</h3>
-<p>Firstly, thank you so much for showing interest in Simplii 3.0 and contributing to our project.👍</p>
+
+
+<p>We appreciate your enthusiasm to contribute to Simplii 4.0. Before you go ahead, kindly discuss the changes you wish to make through issues, discussions, or email. Also, make sure you check out our <a href="#code-of-conduct">Code Of Conduct</a> file to contribute and participate in this project</p>
 The following are a set of guidelines for contributing to Simplii. We are open to suggestions to enhance our project so feel free to propose changes to this document in a pull request.
 
 
