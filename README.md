@@ -92,17 +92,22 @@ In the new version of Simplii, we have resolved all these bugs and added new fun
  ### User Interface: Register 
 <p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
 <p align="center"><img width="700" src="./assets/Registration Page.png"></p>
+
+ ### User Interface: Welcome Email 
+<p> Once your register for Simplii, you get a welcome email from us appreciating your interest in using our website and welcoming you onboard. </p>
+<p align="center"><img width="700" src="./assets/AccountCreatingEmail.png"></p>
  
 ### User Interface: Login 
-<p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
+<p> Once you create an account, you can login to the website using your credentials </p>
 <p align="center"><img width="700" src="./assets/Login Page.png"></p>
  
- ## Adding Tasks:
- 
+ ### User Interface: Dashboard
+<p> Once you login, you see your dashboard </p>
+<p align="center"><img width="700" src="./assets/Dashboard Page.png"></p>
 
-https://user-images.githubusercontent.com/89509351/144703705-0628f2a2-8004-442c-8612-a5de40de92be.mp4
-
-
+### User Interface: About
+<p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
+<p align="center"><img width="700" src="./assets/About Page.png"></p>
  
  ## Task Recommendation and Display:
  
