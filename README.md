@@ -10,10 +10,16 @@
 ![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 [![Lint Python](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml)
 
+
+<a href="https://github.com/prateeksingamsetty/Simplii/forks" target="blank">
+<img src="https://img.shields.io/github/forks/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii forks"/>
+</a>
+<a href="https://github.com/prateeksingamsetty/Simplii/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii stars"/>
+</a>
 <a href="https://github.com/prateeksingamsetty/Simplii/issues" target="blank">
 <img src="https://img.shields.io/github/issues/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii issues"/>
 </a>
-
 <a href="https://github.com/prateeksingamsetty/Simplii/issues?q=is%3Aissue+is%3Aclosed" target="blank">
 <img src="https://img.shields.io/github/issues-closed/prateeksingamsetty/Simplii" alt="Simplii issues closed"/>
 </a>
