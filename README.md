@@ -23,6 +23,9 @@
 <a href="https://github.com/prateeksingamsetty/Simplii/issues?q=is%3Aissue+is%3Aclosed" target="blank">
 <img src="https://img.shields.io/github/issues-closed/prateeksingamsetty/Simplii" alt="Simplii issues closed"/>
 </a>
+<a href="https://github.com/prateeksingamsetty/Simplii/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii pull-requests"/>
+</a>
 
 ## Link to Demonstration Video of the Project: 
 https://youtu.be/GecaW1x1y8k
