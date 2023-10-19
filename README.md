@@ -4,10 +4,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://app.travis-ci.com/atharva1996/Simplii.svg?branch=main)](https://app.travis-ci.com/atharva1996/Simplii)
-![Code Coverage](https://github.com/atharva1996/Simplii/blob/main/src/coverage.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/style_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
+![Code Coverage](https://github.com/prateeksingamsetty/Simplii/blob/main/src/coverage.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
+![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
 
 ## Link to Demonstration Video of the Project: 
 https://youtu.be/GecaW1x1y8k
@@ -131,11 +131,11 @@ https://user-images.githubusercontent.com/89509351/144703727-e757e3e4-3776-470f-
  Step 2: 
   Git Clone the Repository 
   
-    git clone https://github.com/atharva1996/Simplii.git
+    git clone https://github.com/prateeksingamsetty/Simplii.git
     
   (OR) Download the .zip file on your local machine
   
-    https://github.com/atharva1996/Simplii.git
+    https://github.com/prateeksingamsetty/Simplii.git
   
  Step 3:
    Install the required packages by running the following command in the terminal 
@@ -154,7 +154,7 @@ https://user-images.githubusercontent.com/89509351/144703727-e757e3e4-3776-470f-
 ## Source Code
   
   Link to the repository:
-    https://github.com/atharva1996/Simplii
+    https://github.com/prateeksingamsetty/Simplii.git
                                                                                                                                                   
  ## Delta
  
@@ -187,15 +187,12 @@ https://user-images.githubusercontent.com/89509351/144703727-e757e3e4-3776-470f-
    
    ## Team Members
    
-  <table>
-  <tr>
-    <td align="center"><a href="https://github.com/atharva1996"><img src="https://avatars.githubusercontent.com/u/16671348?v=4" width="100px;" alt=""/><br /><sub>     <b>Atharva Patil</b></sub></a></td>
-    <td align="center"><a href="https://github.com/AtharvaJ10"><img src="https://avatars.githubusercontent.com/u/49825649?v=4" width="100px;" alt=""/><br /><sub>       <b>Atharva Joshi</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Banpreet123"><img src="https://avatars.githubusercontent.com/u/64312538?s=400&u=f4bb34b674d6dcf2491e8051303835fb79d0f45f&v=4" width="100px;" alt=""/><br /><sub>       <b>Banpreet Singh</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/vaish68"><img src="https://avatars.githubusercontent.com/u/89509351?v=4" width="100px;" alt=""/><br /><sub>        <b>Vaishnavi Patil</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/shivam-pednekar"><img src="https://avatars.githubusercontent.com/u/62328699?v=4" width="100px;" alt=""/><br />       <sub><b>Shivam Pednekar</b></sub></a><br /></td>
-  </tr>
-</table>
+  <ul style="list-style-type:  '- ' ; padding: 0;">
+  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;"><b>Shiva Vara Prasad Kandhagatla</b></a></li>
+  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;"><b>Prateek Singamsetty</b></a></li>
+  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;"><b>Laasya Choudary Nandamuri </b></a></li>
+  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;"><b>Jayanth Ramanidharan</b></a></li>
+</ul>
 
   ## Contribution
   
