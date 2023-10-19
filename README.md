@@ -25,7 +25,7 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 
 # Table of Contents  
 
-- [Why use Simplii?](#why-use-simplii)
+- [Why Simplii?](#why-use-simplii)
 - [Implementation](#implementation)
 - [Built with:](#built-with)
 - [Core Functionalities of the Application:](#core-functionalities-of-the-application)
@@ -42,12 +42,21 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 - [Contribution](#contribution)
 - [License](#license)
 
-## Why use Simplii?
+## Why Simplii?
 
--User can add tasks based on their difficulty levels- Physical or Intellectual work and then work on it depending on their priority.<br>
--User can keep a track of the upcoming tasks by checking their deadlines and then work towards it.<br>
--User can easily check the progress of his work by checking the status tab.<br>
--Tasks are recommended to the users based on their upcoming deadlines for the user's convenience.<br>
+-Simplii has a user-friendly UI, equally appealing to people of all ages and also people learning to use technology.
+-Multi-User Login
+-User can add new tasks based on their category.<br>
+-Users can update tasks as and when they work on them.<br>
+-User can keep track of not just work that is in progress, but also completed tasks.<br>
+-Tasks can be viewed based on the priority of the deadline.<br>
+-Users can set up email reminders when a task approaches a deadline.<br>
+-Most importantly, with simplii, users are always up for a stress-free outing!!!
+
+<p align="center">
+<img width="614"  src="./assets/friends-outing.gif">
+</p>
+
 
 <p align= "center">
 <img width="600" height ="500" src="https://user-images.githubusercontent.com/89509351/144696048-8968db92-e41a-44b1-a720-66a482e0ed4a.png"> 
