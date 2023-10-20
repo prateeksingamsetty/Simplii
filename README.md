@@ -1,4 +1,5 @@
-
+<p><b></b> Simplii Your Task Scheduling App</b> </p>
+<p align="center"><img width="700" src="./assets/Simplii Image pic.jpg"></p>
 
 [![DOI](https://zenodo.org/badge/404911045.svg)](https://zenodo.org/badge/latestdoi/404911045)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -25,7 +26,7 @@
 </a>
 
 ## Link to Demonstration Video of the Project: 
-https://youtu.be/GecaW1x1y8k
+https://www.youtube.com/watch?v=8XT07zayAqI
 
 # SIMPLII 4.0
 
@@ -75,18 +76,6 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 
 
 ## Implementation:
-The video below describes the previous version of Simplii
-
-https://user-images.githubusercontent.com/89509351/144701576-5f2d6677-a741-4d58-b1fe-9a2b012f2b8e.mp4
-
-As you walk through this old version of Simplii, you can observe many errors. Firstly, when the user adds a task, it gets displayed 3 times on the dashboard. Moreover, when the user tries to delete the task, all the tasks in the dashboard get deleted instead of just deleting that single task
-
-In the new version of Simplii, we have resolved all these bugs and added new functionalities.
-
- 
- 
-
-
 
 ## Built with:
 <table border = "0px">
