@@ -51,7 +51,7 @@
 |  Does your software describe how a user can get help with using your software? | Yes   | 283   |
 |  Does your website and documentation describe what support, if any, you provide to users and developers?  | No   | 283   |
 | Does your project have an e-mail address or forum that is solely for supporting users? | No   | 283   |
-| Are e-mails to your support e-mail address received by more than one person?  | 301   | N/A   |
+| Are e-mails to your support e-mail address received by more than one person?  | N/A   | 283   |
 | Does your project have a ticketing system to manage bug reports and feature requests? | Yes   | 283   |
 | Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? | Yes   | 283   |
 | Is your software’s architecture and design modular? | Yes   | 283   |
@@ -81,12 +81,12 @@ e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python
 | Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | Yes   | 283   |
 | Do you have an automated test suite for your software? | Yes   | 283   |
 | Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | Yes   | 283   |
-| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | 301   | 283   |
+| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | Yes   | 283   |
 | Are your test results publicly visible? | Yes   | 283   |
 | Are all manually-run tests documented? | Yes   | 283   |
 | Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?
 e.g. release announcements, publications, workshops, conference presentations | No   | 283   |
-| Does your website state how many projects and users are associated with your project? | 301   | 283   |
+| Does your website state how many projects and users are associated with your project? | N/A   | 283   |
 | Do you provide success stories on your website? | No  | 283   |
 | Do you list your important partners and collaborators on your website? | N/A   | 283   |
 | Do you list your project's publications on your website or link to a resource where these are available? | N/A   | 283   |
