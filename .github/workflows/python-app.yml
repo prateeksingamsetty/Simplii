@@ -34,7 +34,7 @@ jobs:
     - name: Test with pytest
       run: |
         cd src
-        python app.py &
+        python application.py &
         sleep 5
         cd ..
         pytest
