@@ -10,15 +10,15 @@
 Notes|Self-assement (Total-90/90) |Evidence|
 --------|------|-------|
 Video |3| https://youtu.be/8XT07zayAqI |
-Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Shiva Vara Prasad Kandhagatla(shiva1239)-22  Prateek Singamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18  Workload is spread equally |
+Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Shiva Vara Prasad Kandhagatla(shiva1239)-26  Prateek Singamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18  Workload is spread equally |
 "but nevertheless, here is a track record that everyone is contributing a lot) "|3|  Everyone is contributing a lot as each person has more than 15 commits
-Number of commits |3|https://github.com/prateeksingamsetty/Simplii/graphs/contributors  - 103
-Number of commits: by different people |3| Shiva Vara Prasad Kandhagatla(shiva1239)-22  prateeksingamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18 |
+Number of commits |3|https://github.com/prateeksingamsetty/Simplii/graphs/contributors  - 107
+Number of commits: by different people |3| Shiva Vara Prasad Kandhagatla(shiva1239)-26  prateeksingamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18 |
 Issues reports: there are many |3| https://github.com/prateeksingamsetty/Simplii/issues 
 Issues are being closed |3|https://github.com/prateeksingamsetty/Simplii/issues?q=is%3Aissue+is%3Aclosed - Every issue is closed
 DOI badge exists |3|DOI Badge: https://zenodo.org/records/10020461
 "Docs: doco generated format not ugly "|3| Md files: https://github.com/prateeksingamsetty/Simplii/tree/main/docs , https://github.com/prateeksingamsetty/Simplii/blob/main/README.md |
-Docs: what: point descriptions of each class/function (in isolation) |3| Function_desc .md : https://github.com/prateeksingamsetty/Simplii/blob/main/docs/function_description.md |
+Docs: what: point descriptions of each class/function (in isolation) |3| Function_desc .md : https://github.com/prateeksingamsetty/Simplii/blob/main/docs/Component%20Description.pdf |
 "Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z" | 3 | Readme : https://github.com/prateeksingamsetty/Simplii/blob/main/README.md - Clear explanation of every feature |
 "Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing "|3|Readme: https:/github.com/prateeksingamsetty/Simplii/blob/main/README.md |
 "Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code. "|3| https://github.com/prateeksingamsetty/Simplii#user-interface-login
@@ -41,7 +41,7 @@ Evidence that the members of the team are working across multiple places in the 
 Short release cycles |3| https://github.com/prateeksingamsetty/Simplii/releases/tag/slash_v1.4.1  |
 Q1 - What your software does |  | 
 "1.1) Does your website and documentation provide a clear, high-level overview of your software? "|YES| https://github.com/prateeksingamsetty/Simplii# SIMPLII 4.0
-1.2) Does your website and documentation clearly describe the type of user who should use your software? |YES| https://github.com/prateeksingamsetty/Simplii# Use Case
+1.2) Does your website and documentation clearly describe the type of user who should use your software? |YES| https://github.com/prateeksingamsetty/Simplii#Use-Case
 1.3) Do you publish case studies to show how your software has been used by yourself and others? |NO|
 Q2 - Your project's and software's identity ||
 2.1) Is the name of your project/software unique? |YES|
@@ -53,7 +53,7 @@ Q3 - Availability of your software ||
 "3.4) Is your software hosted in an established third-party repository ? "|YES| GitHub
 Q4 - Your software's documentation ||
  4.1) Is your documentation clearly available on your website or within your software? |YES| https://github.com/prateeksingamsetty/Simplii/blob/main/README.md
-" 4.2) Does your documentation include a ""quick start"" guide that provides a short overview of how to use your software with some basic examples of use? "|YES| https://github.com/prateeksingamsetty/Simplii#why Simplii
+" 4.2) Does your documentation include a ""quick start"" guide that provides a short overview of how to use your software with some basic examples of use? "|YES| https://github.com/prateeksingamsetty/Simplii#why-Simplii
 " 4.3) If you provide more extensive documentation does this provide clear step-by-step instructions on how to deploy and use your software? "|YES|
 "4.4) Do you provide a comprehensive guide to all your software’s commands functions and options? "|YES|
 4.5) Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? |NO|
@@ -85,9 +85,9 @@ Q10 - How you manage your source code ||
 "10.4) Is there a branch of the repository that is always stable? (i.e. tests always pass code always builds successfully) "|YES|https://github.comprateeksingamsetty/Simplii/tree/main
 10.5) Do you back-up your repository? |YES|https://zenodo.org/records/10020461
 Q11 - Building and installing your software ||
-11.1) Do you provide publicly-available instructions for building your software from the source code? |YES|https://github.com/prateeksingamsetty/Simplii#why Simplii
+11.1) Do you provide publicly-available instructions for building your software from the source code? |YES|https://github.com/prateeksingamsetty/Simplii#why-Simplii
 "11.2) Can you build or package your software using an automated tool? "|YES|
-11.3) Do you provide publicly available instructions for deploying your software? |YES|https://github.com/prateeksingamsetty/Simplii#why Simplii
+11.3) Do you provide publicly available instructions for deploying your software? |YES|https://github.com/prateeksingamsetty/Simplii#why-Simplii
 11.4) Does your documentation list all third-party dependencies? |YES|https://github.com/prateeksingamsetty/Simplii/blob/main/requirements.txt
 11.5) Does your documentation list the version number for all third-party dependencies? |YES|https://github.com/prateeksingamsetty/Simplii/blob/main/requirements.txt
 "11.6) Does your software list the web address and licences for all third-party dependencies and say whether the dependencies are mandatory or not "|YES|
