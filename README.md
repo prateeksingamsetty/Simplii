@@ -37,7 +37,8 @@ Introducing Simplii, the almost perfect task management solution. It is similar 
 </p>
 
 ## Link to Demonstration Video of the Project: 
-https://vimeo.com/875832522/1daee2aef8?share=copy
+
+https://youtu.be/8XT07zayAqI 
 
 
 # Table of Contents  
@@ -78,6 +79,12 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 -Users can set up email reminders when a task approaches a deadline.<br>
 -Most importantly, with simplii, users are always up for a stress-free outing!!!
 
+## Use Case
+
+-All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.
+-Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.
+
+
 <p align="center">
 <img width="614"  src="./assets/friends-hangout.gif">
 </p>
@@ -94,9 +101,6 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 <td align="center"><img src ="https://raw.githubusercontent.com/devicons/devicon/v2.14.0/icons/mongodb/mongodb-original.svg" width="40" height="40"/><b>MongoDB</b></td>  
   </tr>
 </table>
-
-
-## Enhancements
  
  ### Register 
 <p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
@@ -216,10 +220,10 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
    ## Team Members
    
   <ul style="list-style-type:  '- ' ; padding: 0;">
-  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;"><b>Shiva Vara Prasad Kandhagatla</b></a></li>
-  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;"><b>Prateek Singamsetty</b></a></li>
-  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;"><b>Laasya Choudary Nandamuri </b></a></li>
-  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;"><b>Jayanth Ramanidharan</b></a></li>
+  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;"><Shiva Vara Prasad Kandhagatla</a></li>
+  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;">Prateek Singamsetty</a></li>
+  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;">Laasya Choudary Nandamuri </a></li>
+  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;">Jayanth Ramanidharan</a></li>
 </ul>
 
   ## Contribution
