@@ -79,15 +79,16 @@ https://youtu.be/8XT07zayAqI
 -Users can set up email reminders when a task approaches a deadline.<br>
 -Most importantly, with simplii, users are always up for a stress-free outing!!!
 
+<p align="center">
+<img width="614"  src="./assets/friends-hangout.gif">
+</p>
+
 ## Use Case
 
 -All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.
 -Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.
 
 
-<p align="center">
-<img width="614"  src="./assets/friends-hangout.gif">
-</p>
 
 ## Built with:
 <table border = "0px">
