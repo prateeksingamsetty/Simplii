@@ -27,14 +27,22 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 # Table of Contents  
 
 - [Why Simplii?](#why-simplii)
+- [Use Case](#use-case)
 - [Built with:](#built-with)
-- [Core Functionalities of the Application:](#core-functionalities-of-the-application)
+- [Enhancements](#enhancements)
   - [Register](#register)
   - [Welcome Email](#welcome-email)
   - [Login](#login)
-  - [Adding tasks](#adding-tasks)
-  - [Task Recommendation and Display](#task-recommendation-and-display)
-  - [Modifying tasks Updating and Deleting](#modifying-tasks-updating-and-deleting)
+  - [Dashboard](#dashboard)
+  - [About Page](#about-page)
+  - [Add Task Page](#add-task-page)
+  - [Edit Task Page](#edit-task-page)
+  - [Deadlines](#deadlines)
+  - [Tasks Due email](#tasks-due-email)
+  - [Mail for Password Reset Link](#mail-for-password-reset-link)
+  - [Password Reset Successful](#password-reset-successful)
+  - [MongoDB Users Table](#mongodb-users-table)
+  - [MongoDB Tasks Table](#mongodb-tasks-table)
 - [Steps for Execution:](#steps-for-execution)
 - [Source Code](#source-code)
 - [Delta](#delta)
@@ -43,7 +51,7 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 - [Contribution](#contribution)
 - [License](#license)
 
-# Why Simplii?
+## Why Simplii?
 
 -Simplii has a user-friendly UI, equally appealing to people of all ages and also people learning to use technology.
 -Multi-User Login
@@ -59,8 +67,8 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 </p>
 
 ## Use Case:
--All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.
--Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.
+-All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.<br>
+-Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.<br>
 
 
 ## Built with:
@@ -77,57 +85,57 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 </table>
 
 
-## Enhancements you can't miss!🔥:
+## Enhancements
  
- ### User Interface: Register 
+ ### Register 
 <p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
 <p align="center"><img width="700" src="./assets/Registration Page.png"></p>
 
- ### User Interface: Welcome Email 
+ ### Welcome Email 
 <p> Once your register for Simplii, you get a welcome email from us appreciating your interest in using our website and welcoming you onboard. </p>
 <p align="center"><img width="700" src="./assets/AccountCreatingEmail.png"></p>
  
-### User Interface: Login 
+### Login 
 <p> Once you create an account, you can login to the website using your credentials </p>
 <p align="center"><img width="700" src="./assets/Login Page.png"></p>
  
- ### User Interface: Dashboard
+ ### Dashboard
 <p> Once you login, you see your dashboard </p>
 <p align="center"><img width="700" src="./assets/Dashboard Page.png"></p>
 
-### User Interface: About Page
+### About Page
 <p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
 <p align="center"><img width="700" src="./assets/About Page.png"></p>
 
-## User Interface: Add Task Page
+### Add Task Page
 <p> When you click on the add task on the navigation bar, you are redicrected to a page that consists of a form. Here, you can fill the details regarding the task you want to add and click on add task. The task is added to the database and you can view it on the dashboard </p>
 <p align="center"><img width="700" src="./assets/Task Page.png"></p>
 
-## User Interface: Edit Task Page
+### Edit Task Page
 <p> When you view the task on the dashboard, you can see the option to edit the task details. When you click on edit, the edit task form opens up and you can make necessary changes to the task details and update them. </p>
 <p align="center"><img width="700" src="./assets/Edit Page.png"></p>
 
-## User Interface: Deadlines
+### Deadlines
 <p> When you click on the deadline tab on the navigation bar, you are redirected to the deadlines page. This page consists of all your tasks in the order of earliest due to the farthest due. In this page you can also choose a date and get an email regarding the tasks that are due within the date chosen. </p>
 <p align="center"><img width="700" src="./assets/Deadlines.png"></p>
 
-## User Interface: Tasks Due Email
+### Tasks Due Email
 <p> When you choose a date and click on get email, you get an email regarding the tasks due. A sample of the email is shown below. </p>
 <p align="center"><img width="700" src="./assets/Tasks Due email.png"></p>
 
-## User Interface: Mail for Password Reset Link
+### Mail for Password Reset Link
 <p> Another new feature that has been added is the forgot password. When you click on forget password, you recieve a password reset link to your email. A sample email is shown below. </p>
 <p align="center"><img width="700" src="./assets/Password Reset Link.png"></p>
 
-## User Interface: Password Reset Successful
+### Password Reset Successful
 <p> When you click on the link sent to you via email, you are redirected to a password reset page and once you click on reset, you are directed to the login page and the following message is displayed showing a successful password change. </p>
 <p align="center"><img width="700" src="./assets/PasswordResetSuccessful.png"></p>
 
-## MongoDB Users Table
+### MongoDB Users Table
 <p> For Simplii we used MongoDB for backend. The following image shows how the users details are stored in the database.</p>
 <p align="center"><img width="700" src="./assets/MongoDB Compass Users Table.png"></p>
 
-## MongoDB Tasks Table
+### MongoDB Tasks Table
 <p> For each user, we store their tasks in the database. The following image shows how the tasks are stored in the database. </p>
 <p align="center"><img width="700" src="./assets/MongoDB Compass Tasks Table.png"></p>
  
