@@ -27,10 +27,10 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 # Table of Contents  
 
 - [Why Simplii?](#why-use-simplii)
-- [Implementation](#implementation)
 - [Built with:](#built-with)
 - [Core Functionalities of the Application:](#core-functionalities-of-the-application)
   - [Register](#register)
+  - [Welcome Email](#welcome-email)
   - [Login](#login)
   - [Adding tasks](#adding-tasks)
   - [Task Recommendation and Display](#task-recommendation-and-display)
