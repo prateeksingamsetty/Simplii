@@ -8,6 +8,7 @@
 ![Code Coverage](https://github.com/prateeksingamsetty/Simplii/blob/main/src/coverage.svg)
 [![Python Style Checker](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml)
 [![Close as a feature](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml)
+[![GitHub version](https://img.shields.io/github/v/release/prateeksingamsetty/Simplii)](https://github.com/prateeksingamsetty/Simplii/releases)
 [![Lint Python](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml)
 <a href="https://github.com/prateeksingamsetty/Simplii/forks" target="blank">
 <img src="https://img.shields.io/github/forks/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii forks"/>
