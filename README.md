@@ -26,7 +26,7 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 
 # Table of Contents  
 
-- [Why Simplii?](#why-use-simplii)
+- [Why Simplii?](#why-simplii)
 - [Built with:](#built-with)
 - [Core Functionalities of the Application:](#core-functionalities-of-the-application)
   - [Register](#register)
@@ -43,7 +43,7 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 - [Contribution](#contribution)
 - [License](#license)
 
-## Why Simplii?
+# Why Simplii?
 
 -Simplii has a user-friendly UI, equally appealing to people of all ages and also people learning to use technology.
 -Multi-User Login
@@ -58,7 +58,9 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 <img width="614"  src="./assets/friends-hangout.gif">
 </p>
 
-
+## Use Case:
+-All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.
+-Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.
 
 
 ## Built with:
