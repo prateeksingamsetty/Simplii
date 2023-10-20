@@ -133,7 +133,7 @@ https://youtu.be/8XT07zayAqI
 
 ### Deadlines
 <p> When you click on the deadline tab on the navigation bar, you are redirected to the deadlines page. This page consists of all your tasks in the order of earliest due to the farthest due. In this page you can also choose a date and get an email regarding the tasks that are due within the date chosen. </p>
-<p align="center"><img width="700" src="./assets/Deadlines.png"></p>
+<p align="center"><img width="700" src="./assets/Deadlines 1.png"></p>
 
 ### Tasks Due Email
 <p> When you choose a date and click on get email, you get an email regarding the tasks due. A sample of the email is shown below. </p>
