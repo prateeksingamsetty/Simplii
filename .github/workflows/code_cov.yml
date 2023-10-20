@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Install Python 3.9.7
+    - name: Install Python 3.9
       uses: actions/setup-python@v1
       with:
         python-version: 3.9.7
@@ -25,7 +25,7 @@ jobs:
     - name: Run the tests
       run: |
         cd src
-        python app.py &
+        python application.py &
         sleep 5
         cd ../test
         pytest --cov=./
