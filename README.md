@@ -89,8 +89,6 @@ https://youtu.be/8XT07zayAqI
 -All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.
 -Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.
 
-
-
 ## Built with:
 <table border = "0px">
   <tr>
@@ -104,7 +102,7 @@ https://youtu.be/8XT07zayAqI
   </tr>
 </table>
  
- ### Register 
+ ### User Interface Register 
 <p> You can create your own account and register on the website. You can store your data and can access the data whenever required. </p>
 <p align="center"><img width="700" src="./assets/Registration Page.png"></p>
 
@@ -112,7 +110,7 @@ https://youtu.be/8XT07zayAqI
 <p> Once your register for Simplii, you get a welcome email from us appreciating your interest in using our website and welcoming you onboard. </p>
 <p align="center"><img width="700" src="./assets/AccountCreatingEmail.png"></p>
  
-### Login 
+### User Interface Login 
 <p> Once you create an account, you can login to the website using your credentials </p>
 <p align="center"><img width="700" src="./assets/Login Page.png"></p>
  
@@ -120,7 +118,7 @@ https://youtu.be/8XT07zayAqI
 <p> Once you login, you see your dashboard </p>
 <p align="center"><img width="700" src="./assets/Dashboard Page.png"></p>
 
-### About Page
+### User Interface About Page
 <p> When you click on the about on the navigation bar, you are redicrected to a page that consists information about Simplii </p>
 <p align="center"><img width="700" src="./assets/About Page.png"></p>
 
@@ -157,8 +155,6 @@ https://youtu.be/8XT07zayAqI
 <p align="center"><img width="700" src="./assets/MongoDB Compass Tasks Table.png"></p>
  
  
-
-
 ## Steps for execution
  
  Step 1:
@@ -214,15 +210,19 @@ https://youtu.be/8XT07zayAqI
   
   The  following features can be implemented in the future scope of this application:
  
-   1. Create a mobile application for the web version of the application.
-   2. Make the website view port adaptable - the website should look good on phone, tablet and computer.
-   3. Create chatbot for the web portal
-   4. Add an emergency schedule and recommend tasks based on the new schedule.
+   1. Add a Scheduler which runs 24/7 and sends Tasks Remainders to the users ever day.
+   2. Allow users to back up their task data and settings, and provide an option to restore their data in case of accidental deletions or device changes.
+   3. Implement a feature that intelligently sorts and prioritizes tasks based on deadlines, importance, or user-defined criteria.
+   4. Enable integration with other popular productivity and communication tools such as calendars (e.g., Google Calendar, Microsoft Outlook), project management software (e.g., Trello, Asana), and messaging apps (e.g., Slack).
+   5. Create a mobile application for the web version of the application.
+   6. Create chatbot for the web portal
+      
+   
    
    ## Team Members
    
   <ul style="list-style-type:  '- ' ; padding: 0;">
-  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;"><Shiva Vara Prasad Kandhagatla</a></li>
+  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;">Shiva Vara Prasad Kandhagatla</a></li>
   <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;">Prateek Singamsetty</a></li>
   <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;">Laasya Choudary Nandamuri </a></li>
   <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;">Jayanth Ramanidharan</a></li>
