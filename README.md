@@ -1,13 +1,29 @@
-
+<p><b></b> Simplii Your Task Scheduler</b> </p>
+<p align="center"><img width="700" src="./assets/Simplii Image pic.jpg"></p>
 
 [![DOI](https://zenodo.org/badge/404911045.svg)](https://zenodo.org/badge/latestdoi/404911045)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Build Status](https://app.travis-ci.com/atharva1996/Simplii.svg?branch=main)](https://app.travis-ci.com/atharva1996/Simplii)
+[![Build Status](https://app.travis-ci.com/prateeksingamsetty/Simplii.svg?branch=main)](https://app.travis-ci.com/atharva1996/Simplii)
 ![Code Coverage](https://github.com/prateeksingamsetty/Simplii/blob/main/src/coverage.svg)
-![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)
-![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)
-![github workflow](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)
+[![Python Style Checker](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml)
+[![Close as a feature](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml)
+[![Lint Python](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/Simplii/actions/workflows/syntax_checker.yml)
+<a href="https://github.com/prateeksingamsetty/Simplii/forks" target="blank">
+<img src="https://img.shields.io/github/forks/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii forks"/>
+</a>
+<a href="https://github.com/prateeksingamsetty/Simplii/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii stars"/>
+</a>
+<a href="https://github.com/prateeksingamsetty/Simplii/issues" target="blank">
+<img src="https://img.shields.io/github/issues/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii issues"/>
+</a>
+<a href="https://github.com/prateeksingamsetty/Simplii/issues?q=is%3Aissue+is%3Aclosed" target="blank">
+<img src="https://img.shields.io/github/issues-closed/prateeksingamsetty/Simplii" alt="Simplii issues closed"/>
+</a>
+<a href="https://github.com/prateeksingamsetty/Simplii/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/prateeksingamsetty/Simplii?style=flat-square" alt="Simplii pull-requests"/>
+</a>
 
 
 # SIMPLII 4.0
@@ -65,11 +81,6 @@ https://vimeo.com/875832522/1daee2aef8?share=copy
 <p align="center">
 <img width="614"  src="./assets/friends-hangout.gif">
 </p>
-
-## Use Case:
--All people who love to multi-task their way through life would love Simplii as it helps them keep track of various tasks in the most simple manner.<br>
--Anyone who is new to technology and would be overwhelmed by amazing and well-developed organising applications like google calender/apple calander, would love Simplii.<br>
-
 
 ## Built with:
 <table border = "0px">
