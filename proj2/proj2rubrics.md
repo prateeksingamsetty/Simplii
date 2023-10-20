@@ -10,10 +10,10 @@
 Notes|Self-assement (Total-90/90) |Evidence|
 --------|------|-------|
 Video |3| https://youtu.be/8XT07zayAqI |
-Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Shiva Vara Prasad Kandhagatla(shiva1239)-26  Prateek Singamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18  Workload is spread equally |
+Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Shiva Vara Prasad Kandhagatla(shiva1239)-27  Prateek Singamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18  Workload is spread equally |
 "but nevertheless, here is a track record that everyone is contributing a lot) "|3|  Everyone is contributing a lot as each person has more than 15 commits
-Number of commits |3|https://github.com/prateeksingamsetty/Simplii/graphs/contributors  - 107
-Number of commits: by different people |3| Shiva Vara Prasad Kandhagatla(shiva1239)-26  prateeksingamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18 |
+Number of commits |3|https://github.com/prateeksingamsetty/Simplii/graphs/contributors  - 108
+Number of commits: by different people |3| Shiva Vara Prasad Kandhagatla(shiva1239)-27  prateeksingamsetty(prateeksingamsetty)-28  Laasya Choudary Nandamuri(laasya2704)-35  Jayanth Ramanidharan(jramani)-18 |
 Issues reports: there are many |3| https://github.com/prateeksingamsetty/Simplii/issues 
 Issues are being closed |3|https://github.com/prateeksingamsetty/Simplii/issues?q=is%3Aissue+is%3Aclosed - Every issue is closed
 DOI badge exists |3|DOI Badge: https://zenodo.org/records/10020461
@@ -38,7 +38,7 @@ Evidence that the whole team is using the same tools: everyone can get to all to
 "Evidence that the whole team is using the same tools (e.g. config files in the repo updated by lots of different people) "|3| https://github.com/prateeksingamsetty/Simplii/graphs/contributors |
 "Evidence that the whole team is using the same tools "|3| https://github.com/prateeksingamsetty/Simplii/graphs/contributors  |
 Evidence that the members of the team are working across multiple places in the code base |3| https://github.comprateeksingamsetty/Simplii/graphs/contributors  |
-Short release cycles |3| https://github.com/prateeksingamsetty/Simplii/releases/tag/slash_v1.4.1  |
+Short release cycles |3| https://github.com/prateeksingamsetty/Simplii/releases/tag/Simplii_v1.4.1  |
 Q1 - What your software does |  | 
 "1.1) Does your website and documentation provide a clear, high-level overview of your software? "|YES| https://github.com/prateeksingamsetty/Simplii# SIMPLII 4.0
 1.2) Does your website and documentation clearly describe the type of user who should use your software? |YES| https://github.com/prateeksingamsetty/Simplii#Use-Case
@@ -81,7 +81,7 @@ Q9 - Your software and accessibility ||
 Q10 - How you manage your source code ||
 10.1) Is your source code stored in a repository under revision control? |YES|GitHub
 10.2) Is each source code release a snapshot of the repository? |YES|https://github.com/prateeksingamsetty/Simplii/releases
-10.3) Are releases tagged in the repository? |YES|https://github.com/prateeksingamsetty/Simplii/releases/tag/slash_v1.4.1
+10.3) Are releases tagged in the repository? |YES|https://github.com/prateeksingamsetty/Simplii/releases/tag/Simplii_v1.4.1
 "10.4) Is there a branch of the repository that is always stable? (i.e. tests always pass code always builds successfully) "|YES|https://github.comprateeksingamsetty/Simplii/tree/main
 10.5) Do you back-up your repository? |YES|https://zenodo.org/records/10020461
 Q11 - Building and installing your software ||
@@ -97,7 +97,7 @@ Q12 - How you test your software ||
 12.1) Do you have an automated test suite for your software? |YES|https://github.com/prateeksingamsetty/Simplii/blob/main/.github/workflows/code_cov.yml
 12.2) Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? |YES|
 "12.3) Do you use continuous integration automatically running tests whenever changes are made to your source code? "|YES|https://github.com/prateeksingamsetty/Simplii/blob/main/.github/workflows/code_cov.yml
-12.4) Are your test results publicly visible? |YES|https://app.codecov.io/gh/csc510fall23g45/slash
+12.4) Are your test results publicly visible? |YES|https://app.codecov.io/gh/prateeksingamsetty/Simplii
 12.5) Are all manually run tests documented? |YES|
 Q13 - How you engage with your community ||
 "13.1) Does your project have resources that are regularly updated with information about your software?  "|NO|
